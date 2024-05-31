@@ -32,8 +32,7 @@ jobs:
         run: cd frontend && npm i
 
 
-      - name: Run linters
-        uses: wearerequired/lint-action@v2
-        with:
-          eslint: true
-          prettier: true
+      - name: Run linters frontend
+        run: cd frontend && npm run lint 
+      - name: Run linters backend
+        run: cd backend && npm run lint 
